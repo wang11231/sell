@@ -17,10 +17,10 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
@@ -173,12 +173,13 @@
             <filtering>true</filtering>
           </resource>
         </resources>-->
-        <!--<resources>
+        <resources>
           <resource>
             <directory>src/main/resources</directory>
             <targetPath>BOOT-INF/classes/</targetPath>
           </resource>
-        </resources>-->
+
+        </resources>
     </build>
 
 </project>
