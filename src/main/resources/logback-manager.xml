@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 控制台输出配置 -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="utf-8">
+            <Pattern>[%date] [%-5level] %logger %line --%mdc{client} [%X{LOG_ID}] %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <!-- INFO 输出配置 -->
+    <appender name="logInfoFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>/data/sell/sell.log</File>
+        <encoder>
+            <Pattern>[%date] [%-5level] %logger %line --%mdc{client} [%X{LOG_ID}] %msg%n</Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/data/sell/sell.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>1024MB</maxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <!-- 第三方 jar 日志输出配置 -->
+    <logger name="org.springframework.web.servlet.DispatcherServlet" level="info"/>
+    <logger name="org.springframework.web.context.support.XmlWebApplicationContext" level="info"/>
+    <logger name="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" level="info"/>
+    <logger name="org.apache.commons" level="info"/>
+    <logger name="com.art.manager.mapper" level="DEBUG"/>
+
+    <!-- 日志输出适配器配置 -->
+    <root level="info" name="com.art.manager">
+        <!--<appender-ref ref="stdout"/>-->
+        <appender-ref ref="logInfoFile"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <classPathEntry location="D:\\mysql\\mysql-connector-java-5.1.17.jar"/>
+
+    <context id="oracleTables" targetRuntime="MyBatis3" defaultModelType="flat">
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/saas" userId="root" password="ENC(lAWYU2nlz6jxVDyuJEJLTw==)"/>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <javaModelGenerator targetPackage="com.art.manager.pojo" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="com.art.manager.mapper" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 生成xml文件 -->
+        <!--<javaClientGenerator targetPackage="com.huifu.clp.join.dal.mapper" targetProject="src/main/java" type="XMLMAPPER"/>-->
+
+        <!-- 生成annotated -->
+        <!--<javaClientGenerator targetPackage="com.huifu.clp.join.dal.mapper" targetProject="src/main/java" type="ANNOTATEDMAPPER"/>-->
+
+        <!-- XML和注解的混合形式，(上面这种情况中的)SqlProvider注解方法会被XML替代-->
+        <javaClientGenerator targetPackage="com.art.manager.mapper" targetProject="src/main/java" type="MIXEDMAPPER"/>
+        
+       <!--  <table tableName="BLACK_MER_INFO" domainObjectName="BlackMerInfo"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="BLACK_MER_INFO_TEMP" domainObjectName="BlackMerInfoTemp"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="BLACK_INFO" domainObjectName="BlackInfo"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+        
+        <!-- <table tableName="NEW_MER_BASE_INFO_TBL" domainObjectName="NewMerBaseInfo"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+
+       <!-- <table tableName="NEW_MER_SHAREHOLDER_TBL" domainObjectName="NewMerShareHolder"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+
+        <!--<table tableName="PRODUCT_INFO_TBL" domainObjectName="ProductInfo"-->
+               <!--enableCountByExample="true" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!-- <table tableName="INTERFACE_TEMP_TBL" domainObjectName="InterfaceTemp"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+
+        <!-- <table tableName="PROD_CUST_RELATED_TBL" domainObjectName="ProdCustRelated"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+
+        <!-- <table tableName="PROD_CUST_INFO_TBL" domainObjectName="ProdCustInfo"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+
+        <table tableName="SUB_PROD_CONF_TBL" domainObjectName="SubProdConf"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+
+        <!--<table tableName="INTERFACE_CONF_TBL" domainObjectName="InterfaceConf"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!-- <table tableName="SUB_ACCT_TBL" domainObjectName="SubAcct"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+
+        <!--<table tableName="PROD_AGREEMENT_TBL" domainObjectName="ProdAgreement"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!--<table tableName="NEW_MER_RELATED_COMP_TBL" domainObjectName="NewMerRelatedComp"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!--<table tableName="NEW_MER_ADDR_BOOK_TBL" domainObjectName="NewMerAddrBook"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!--<table tableName="CUST_SERVICE_CHARGE_TBL" domainObjectName="CustServiceCharge"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!--<table tableName="FILE_UPLOAD_TBL" domainObjectName="FileUpload"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!--<table tableName="MAIN_PROC_MNG_TBL" domainObjectName="MainProcMng"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!--<table tableName="ONLINE_DETAIL_RECORD_TBL" domainObjectName="OnlineDetailRecord"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!--<table tableName="PROC_STATUS_LOG" domainObjectName="ProcStatus"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+        <!-- <table tableName="SMS_SEND_LOG" domainObjectName="SmsSendLog"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+
+        <!--<table tableName="MAIL_SEND_LOG" domainObjectName="MailSendLog"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+		<!--
+        <table tableName="REVIEW_RECORD_TBL" domainObjectName="ReviewRecord"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+		-->
+        <!--<table tableName="NEW_TASK_NOTICE" domainObjectName="NewTaskNotice" enableCountByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+
+        <!--<table tableName="STAFF_USER_TBL" domainObjectName="StaffUser" enableCountByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+        <!--<table tableName="SYS_MENU_TBL" domainObjectName="SysMenu" enableCountByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+        <!--<table tableName="USER_MENU_PERMI_TBL" domainObjectName="UserMenuPermi" enableCountByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+        <!-- <table tableName="MER_USER_TBL" domainObjectName="MerUser" enableCountByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/> -->
+        <!--<table tableName="MER_ROLE_TBL" domainObjectName="MerRole" enableCountByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+        <!--<table tableName="USER_ROLE_PERMI_TBL" domainObjectName="UserRolePermi" enableCountByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+
+        <!--<table tableName="TBL_DICT_ITEM" domainObjectName="DictItem" enableCountByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+    	<!--<table tableName="PROD_CUST_RELATED_TBL" domainObjectName="ProdCustRelated"-->
+               <!--enableCountByExample="true" enableUpdateByExample="true"-->
+               <!--enableDeleteByExample="true" enableSelectByExample="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>
+        <table tableName="NEW_MESSAGE_SEND_LOG" domainObjectName="NewMessageSendLog"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>-->
+        <!-- <table tableName="BUSI_INFO_CALL_LOG" domainObjectName="BusiInfoCallLog"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="INVESTOR_INFO_CALL_LOG" domainObjectName="InvestorInfoCallLog"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="CERT_OCR_CALL_LOG" domainObjectName="CertOcrCallLog"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="CERT_OCR_CALL_LOG_MEMBERSHIP" domainObjectName="CertOcrCallLogMembership"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+        <!-- <table tableName="FS_MER_INFO" domainObjectName="FsMerInfo"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+        <!-- <table tableName="FILE_EXPORT_TBL" domainObjectName="FileExport"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+        <!-- <table tableName="LOCA" domainObjectName="Loca"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+        <!--<table tableName="BUSI_DICT_TBL" domainObjectName="BusiDictItem"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="AGENT_CONFIG_INFO" domainObjectName="AgentConfigInfo"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table> -->
+        <table tableName="t_news" domainObjectName="News"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+    </context>
+</generatorConfiguration>
