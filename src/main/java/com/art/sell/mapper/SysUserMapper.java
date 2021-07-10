@@ -1,19 +1,15 @@
-package com.art.sell.service;
+package com.art.sell.mapper;
 
-
-import com.art.sell.pojo.SysMenu;
 import com.art.sell.pojo.SysUser;
-import com.art.sell.pojo.SysUserExample;
-import org.springframework.security.core.userdetails.UserDetails;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
-import java.util.Map;
 
 /**
- * 用户的业务逻辑
- * @author Administrator
+ * 人员管理
  */
-public interface SysUserService {
+@Mapper
+public interface SysUserMapper {
 
     /**
      * 查询人员管理用户
@@ -42,9 +38,5 @@ public interface SysUserService {
      * @return
      */
     public int deleteSysUser(String id);
+
 }
-
-
-
-
-

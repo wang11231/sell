@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.art.sell.pojo.SysUser">
+    <select id="selectSysUSerList" resultType="SysUser">
+        select *
+        from t_sys_user where 1=1
+        <if test="id != null" >id = #{id}</if>
+        <if test="username != null">username  = #{username}</if>
+        <if test="password != null">password  = #{password}</if>
+        <if test="telephone != null">telephone  = #{telephone}</if>
+        <if test="email != null">email  = #{email}</if>
+        <if test="desc != null">desc  = #{desc}</if>
+        <if test="status != null">status  = #{status}</if>
+        <if test="createTime != null">create_time  = #{createTime}</if>
+        <if test="updateTime != null">update_time  = #{updateTime}</if>
+        <if test="post != null">post  = #{post}</if>
+        <if test="superiors != null">superiors  = #{superiors}</if>
+        <if test="sex != null">sex  = #{sex}</if>
+        ORDER BY id DESC
+    </select>
+
+    <insert id="insertSysUser" parameterType="SysUser" useGeneratedKeys="true" keyProperty="id">
+        insert  into t_sys_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="username != null  and username != ''  ">username,</if>
+            <if test="password != null  and password != ''  ">password,</if>
+            <if test="telephone != null  and telephone != ''  ">telephone,</if>
+            <if test="email != null  and email != ''  ">email,</if>
+            <if test="desc != null  and  desc  != ''  ">desc,</if>
+            <if test="status != null  and  status  != ''  ">status,</if>
+            <if test="createTime != null   ">create_time,</if>
+            <if test="updateTime != null   ">update_time,</if>
+            <if test="post != null  and post != ''  ">post,</if>
+            <if test="superiors != null  and superiors != ''  ">superiors,</if>
+            <if test="sex != null  and sex != ''  ">sex,</if>
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="username != null  and username != ''  ">#{username},</if>
+            <if test="password != null  and password != ''  ">#{password},</if>
+            <if test="telephone != null  and telephone != ''  ">#{telephone},</if>
+            <if test="email != null  and email != ''  ">#{email},</if>
+            <if test="desc != null  and  desc  != ''  ">#{desc},</if>
+            <if test="status != null  and  status  != ''  ">#{status},</if>
+            <if test="createTime != null   ">#{createTime},</if>
+            <if test="updateTime != null   ">#{updateTime},</if>
+            <if test="post != null  and post != ''  ">#{post},</if>
+            <if test="superiors != null  and superiors != ''  ">s#{uperiors},</if>
+            <if test="sex != null  and sex != ''  ">#{sex},</if>
+
+        </trim>
+    </insert>
+
+    <update id="updateSysUser" parameterType="SysUser" >
+        update t_sys_user
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="username != null  and username != ''  ">username = #{username},</if>
+            <if test="password != null  and password != ''  ">password = #{password},</if>
+            <if test="telephone != null  and telephone != ''  ">telephone = #{telephone},</if>
+            <if test="email != null  and email != ''  ">email = #{email},</if>
+            <if test="desc != null  and desc != ''  ">desc = #{desc},</if>
+            <if test="status != null  and status != ''  ">desc = #{status},</if>
+            <if test="createTime != null  and createTime != ''  ">create_time = #{createTime},</if>
+            <if test="updateTime != null  and updateTime != ''  ">update_time = #{updateTime},</if>
+            <if test="post != null  and post != ''  ">post = #{post},</if>
+            <if test="superiors != null  and superiors != ''  ">superiors = #{superiors},</if>
+            <if test="sex != null  and sex != ''  ">sex = #{sex},</if>
+
+        </trim>
+            where id = #{id}
+    </update>
+
+    <delete id="deleteSysUser" parameterType="Integer">
+        delete from t_sys_user where id = #{id}
+    </delete>
+
+</mapper>
